@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(primarySwatch: Colors.brown),
       title: 'King And Lord',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const MyHomePage(title: 'Bienvenido a King And Lord'),

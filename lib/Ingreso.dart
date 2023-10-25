@@ -1,5 +1,5 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:oraitsas/style.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -14,10 +14,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 238, 234, 234),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             SizedBox(
                 height: 250,
                 width: 250,
@@ -25,54 +26,51 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 10),
 
             //email
-            const SizedBox(
-              height: 40,
-              width: 300,
-              child: TextField(
-                cursorRadius: Radius.circular(20),
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Password'),
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            //contraseña
-            const SizedBox(
-              height: 40,
-              width: 300,
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Contraseña'),
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            //nombre
-            const SizedBox(
+            SizedBox(
                 height: 40,
                 width: 300,
                 child: TextField(
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Nombre'),
+                  decoration: botonTexto.copyWith(labelText: "Correo"),
+                )),
+            const SizedBox(height: 20),
+
+            //contraseña
+            SizedBox(
+                height: 40,
+                width: 300,
+                child: TextField(
+                  decoration: botonTexto.copyWith(labelText: "Contraseña"),
+                )),
+
+            const SizedBox(height: 20),
+
+            //nombre
+            SizedBox(
+                height: 40,
+                width: 300,
+                child: TextField(
+                  decoration: botonTexto.copyWith(labelText: "Nombre"),
                 )),
             const SizedBox(height: 20),
 
             //Registro
             ElevatedButton(
-                onPressed: () => {}, child: const Text("Registrarse")),
+                style: botonPrincipal,
+                onPressed: () => {},
+                child: const Text(style: styTexto, "Registrarse")),
             const SizedBox(height: 20),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                    height: 30,
-                    width: 30,
+                    height: 50,
+                    width: 50,
                     child: Image.asset("assets/Logo_F.png")),
                 const SizedBox(width: 40),
                 SizedBox(
-                    height: 35,
-                    width: 35,
+                    height: 60,
+                    width: 60,
                     child: Image.asset("assets/Logo_w.png")),
               ],
             ),
